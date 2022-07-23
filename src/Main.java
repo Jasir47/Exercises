@@ -1,6 +1,6 @@
-class exercise {
+class outerClass {
     int a = 3;
-    class exe{
+    class innerClass{
         int d = 4;
     }
 }
@@ -10,8 +10,8 @@ class exercise {
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        exercise e = new exercise();
-        exercise.exe ee = e.new exe();
-        System.out.println(e.a+" "+ee.d);
+        outerClass myOuter = new outerClass();
+        outerClass.innerClass myInner = myOuter.new innerClass();
+        System.out.println(myOuter.a+" "+myInner.d);
     }
 }
